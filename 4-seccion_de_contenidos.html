@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<header>
+<main>
+    <h1>Noticias Nacionales</h1>
+</header>
+    <section> 
+    <!--Para validad la semántica del html usamos validator.w3.org-->
+    <!--si presentamos solo la estructura de los article, la semantica es incorrecta, porque cada contenido de article es indpendiente, por lo tanto necesita  de sus propios encabezados
+    en este caso serían h3. -->
+    <!--Modificamos el ejemplo, y agregamos h3-->
+    <!-- Lo semanticamente correcto es colocar las etiquetas header y footer en cada artcicle, esto es porque cada article representa contenido independiente-->
+    <!-- Section agrupa contenido relaciconado, por lo que podemos hacer un anidamiento de section (tener en cuenta los h1, h2, h3, h4, h5)-->
+    <!--Un detalle importante. El validador no puede verificar la etiqueta <html lang="en"> es decir, si el contenido está en español la etiqueta debería tener el valor "es". Esto causaría una penalización de parte de SEO (Search Engine Optimization) y de posicionamiento-->
+    <h2>Noticias del Día</h2>
+    <article>
+    <header> 
+        <h3>Noticia 1</h3>
+    </header>
+        <p> si presentamos solo la estructura de los article, la semantica es incorrecta, porque cada contenido de article es indpendiente, por lo tanto necesita  de sus propios encabezados
+        en este caso serían h3.</p>
+        <footer>
+        Fuente MendozaPost
+        </footer>
+    </article>
+    <article>
+    <header>
+    <h3>Noticia 2</h3>
+    </header>
+        <p> si presentamos solo la estructura de los article, la semantica es incorrecta, porque cada contenido de article es indpendiente, por lo tanto necesita  de sus propios encabezados
+        en este caso serían h3.</p>
+    <footer>
+    Fuente Los Andes onLine
+    </footer>
+    </article>
+    <article>
+    <h3>Noticia 3</h3>
+    <p> si presentamos solo la estructura de los article, la semantica es incorrecta, porque cada contenido de article es indpendiente, por lo tanto necesita  de sus propios encabezados
+    en este caso serían h3.</p>
+    </article>
+    </section>
+</main>
+<code>
+ #include main() { for(;;) { printf ("Hello World!\n"); } }
+</code>
+<p>New Products</p>
+<ul>
+  <li><data value="3967381398">Mini Ketchup</data></li>
+  <li><data value="3967381399">Jumbo Ketchup</data></li>
+  <li><data value="3967381400">Mega Jumbo Ketchup</data></li>
+</ul>
+
+<table class="sortable">
+ <thead> <tr> <th> Game <th> Corporations <th> Map Size
+ <tbody>
+  <tr> <td> 1830 <td> <data value="8">Eight</data> <td> <data value="93">19+74 hexes (93 total)</data>
+  <tr> <td> 1856 <td> <data value="11">Eleven</data> <td> <data value="99">12+87 hexes (99 total)</data>
+  <tr> <td> 1870 <td> <data value="10">Ten</data> <td> <data value="149">4+145 hexes (149 total)</data>
+</table>
+<footer>
+    fecha 10-06-2022
+</footer>
+</body>
+</html>

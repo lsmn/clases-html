@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es"> <!--este atributo configura el documento HTML diciendole que su idioma es español-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .parrafo1 { color: red; font-size: 14px;}
+    </style>
+</head>
+<body>
+    <!--Atributos: Son valores adicionales que configuran los elementos y/o ajustan su comportamiento.
+    En términos generales hay dos tipos de atributos.
+    . Comunes:
+       Su sintaxis es -> atributo="valor"
+    . Booleanos: 
+       Su sintaxis es -> Atributo 
+       estos no se le asigna valor. Si existen son "thrue" -->
+    <!-- atributos más comunes para la mayoría de las etiquetas HTML 
+        Globales:
+        class -> este atributo se utiliza para dar estilo através de CSS 
+        id    -> este es un identificador único que se utiliza para seleccionar 
+                 el elemento a través de JS y para  hacer navegación a través de anclas 
+        title -> este atributo ayuda a la accesibilidad mostrando una descripción del 
+                 elemento al que pertenece de 
+        data-*-> es un atributo que nos permite guardar algún valor en la etiqueta HTML          
+                 -->
+
+<p class="parrafo1">Esto es una demostración de estilo con atributo class</p>
+<p id="parrafo2">Identificador por atributo id</p>
+<p title="Esto es una demostración de tooltip">Título o tooltip</p>
+<p id="parrafo3" data-ejemplo="Datos pasados">de data data-Ejemplo Datos pasados en la etiqueta (data)</p>
+
+<script>
+/* Ver en Consola del inspector */
+    const p = document.getElementById("parrafo2")
+    const q = document.getElementById("parrafo3")
+    console.log(p.textContent)
+    console.log(q.dataset.ejemplo)
+</script>
+</body>
+</html>
