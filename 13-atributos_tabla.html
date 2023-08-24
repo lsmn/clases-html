@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    table {background-color: aqua;
+            border: 2px solid red;
+            border-radius: 2px;
+            position: absolute;
+            left: 50%;
+            margin-left: -400px;
+            top: 50%;
+            margin-top: -300px;
+            }
+
+    td {background-color:chocolate;
+       text-align: center;
+       }
+       
+    </style>
+</head>
+<body>
+    <!--
+        Atributos para agrupar filas y/o columnas
+
+        rowspan -> la celda ocupa mas de una fila. Valor por defecto es 1
+        colspan -> la celda ocupa mas de una col. Valor por defecto es 1
+    -->
+    <table>
+    <caption>Título de la tabla</caption> 
+    <thead>
+        <tr>
+            <th>Element 1</th><th>Element 2</th><th>Element 3</th><th>Element 4</th><th>Element 5</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="2">1.1</td><td>1.2</td><td>1.3</td><td>1.4</td><td>1.5</td>
+    </tr>
+    <tr>
+        <td>2.1</td><td>2.2</td><td>2.3</td><td>2.4</td>
+    </tr>
+    <tr>
+        <td colspan="5">Ocupo 5 columnas</td>
+    </tr>
+    <tr>
+        <td>3.1</td><td>3.2</td><td>3.3</td><td>3.4</td><td>3.5</td>
+    </tr>
+    <tr>
+        <td>4.1</td><td>4.2</td><td>4.3</td><td>4.4</td><td>4.5</td>
+    </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">Total de elementos</td>
+            <td>20</td>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>

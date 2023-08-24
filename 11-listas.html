@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Imagenes</title>
+</head>
+<!--Listas 
+ol -- Listas ordenadas, son numerradas automáticamente
+ul -- Listas no ordenadas, viñetas
+dl -- Definition list. Se usa para hacer una lista de definiciones. Ej. Diccionario
+Atributos:
+type: según el tipo de lista cambia el ícono o tipo de numeración
+-->
+<body>
+    <header>
+    <nav>
+    <ul> <!--Todos los menu se contruyen de esta forma, donde no importa el orden-->
+    <li>Home</li>
+    <li><a href="#titulo1">Título 1</a></li>
+    <li><a href="#titulo2">Título 2</a></li>
+    <li><a href="#titulo3">Título 3</a></li>
+    </ul>
+    </nav>
+    </header>
+<h2>Ejemplo Lista de compra</h2>
+<ul style="square">
+    <li>Leche</li>
+    <li>Pan</li>
+    <li>Cerveza</li>
+    <li>Carne</li>
+</ul>
+<h2>Orden de aprendizaje</h2>
+<ol> <!--Indica el orden en que debe ser. El navegador entiende la semántica y determina la importancia según el orden-->
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+<h2>Listas de Definición</h2>
+<dl>
+    <dt>HTML</dt>
+    <dd>Hipertex Markup Language</dd>
+    <dt>CSS</dt>
+    <dd>Cascada Style Sheet: Es un lenguaje de <strong>diseño que se utiliza para darle estilos</strong> al HTML<</dd>
+</dl>
+<!--IMPORTANTE:
+    Las listas se pueden anidar de diferentes formas
+-->
+<!--Ejemplo de atributos en las marcas ul y ol
+ul -> square, circle, disk, disk
+ol -> 1, A, a, I, i  START -> indica en que nro deseamos que comience
+-->
+<h3>Listas no ordenadas</h3>
+<ul type="square">
+    <li>Leche</li>
+    <li>Pan</li>
+    <li>Cerveza</li>
+    <li>Carne</li>
+</ul>
+<h3>Listas ordenadas</h3>
+<ol type="a" start="3">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Java</li>
+    <li>PHP</li>
+    <li>ASPX</li>
+</ol>
+</body>
+</html>

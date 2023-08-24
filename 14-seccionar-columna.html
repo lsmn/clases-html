@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    table {background-color: aqua;
+            border: 2px solid red;
+            position: absolute;
+            left: 50%;
+            margin-left: -400px;
+            top: 50%;
+            margin-top: -300px;
+            }
+/*
+    col {background-color:chocolate;
+       text-align: center;
+       }
+*/
+col:nth-child(1) {
+       background-color: rgb(11, 169, 61);
+       text-align: center;
+       }
+ col:nth-child(2) {
+       background-color: rgb(234, 100, 102);
+       text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <!--
+        Atributos para selecionar columnas
+
+        colgroup -> Agrupa celdas por columnas. Nos permite seleccionar una columna en concreto
+                    Dentro colocaremos tantas etiquetas col como columnas tenemos, cada etiquetas
+                    col equivale a una columna en concreto, siguiendo el mismo orden que tienen 
+                    en la tabla.
+                    si necesitamos que una etiqueta col agrupe más de una columna, tenemos el 
+                    atributo span, que funciona de la misma forma que colspan y rowspan
+        
+    -->
+    <table>
+    <caption>Título de la tabla</caption> 
+    <thead>
+        <tr>
+            <th>Element 1</th><th>Element 2</th><th>Element 3</th><th>Element 4</th><th>Element 5</th>
+        </tr>
+    </thead>
+    <tbody>
+    <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+    </colgroup>
+    <tr>
+        <td>1.1</td><td>1.2</td><td>1.3</td><td>1.4</td><td>1.5</td>
+    </tr>
+    <tr>
+        <td>2.1</td><td>2.2</td><td>2.3</td><td>2.4</td><td>2.5</td>
+    </tr>
+    <tr>
+        <td>3.1</td><td>3.2</td><td>3.3</td><td>3.4</td><td>3.5</td>
+    </tr>
+    <tr>
+        <td>4.1</td><td>4.2</td><td>4.3</td><td>4.4</td><td>4.5</td>
+    </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total 1</td>
+            <td>Total 2</td>
+            <td>Total 3</td>
+            <td>Total 4</td>
+            <td>Total 5</td>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>
