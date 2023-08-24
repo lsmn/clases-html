@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <!--
+        Los formularios nos permiten interactuar con el usuario. 
+        Etiquetas
+        form-> es la etiqueta que engloba nuestro formulario.
+        label-> Sirve para escribir el nombre del campo a rellenar. Debe tener el atributo for al cual se le indica un id que lo que hará será emparejar el label con su input correspondiente.
+        input-> Sirve para crear un campo que permitirá al usuario interactuar. El único atributo obligatorio es name.
+        button-> Crea un botón que permitirá enviar un formulario.
+    -->
+</head>
+<body>
+    <form> 
+    <!-- la forma recomendada de hacerlo es la siguiente  -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+   
+    <!-- Esta es otra forma de hacerlo pero no se recomienda
+    <label>
+        Nombre:
+        <input>
+    </label>
+
+      <button type="submit">Enviar formulario:</button>
+    -->
+    https://validator.w3.org/
+    </form>
+</body>
+</html>

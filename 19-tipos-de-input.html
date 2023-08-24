@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Input</title>
+</head>
+<!-- 
+    input type:
+        button -> Visualmente es igual, pero el formulario no se enviará
+        submit -> Se utiliza para enviar el formulario
+
+        date: -> Se utiliza para introducir una fecha
+        datetime -> Obsoleto
+        datetime-local -> fecha y hora, no funciona en firefox
+        time -> Se utiliza para introducir una hora
+            TIP
+                *Se recomienda usar datetime y time para seleccionar fecha y hora
+                hidden -> Campo oculto, puede contener valor pero no se mostrará
+        month -> Se utiliza para introducir un mes
+        week -> Se utiliza pra introducir el número de semana del año
+
+        search -> Se utiliza para las barras de búsqueda
+        tel -> Se utiliza para introducir números telefónicos
+        email -> Se utiliza para introducir un email
+        password -> Se utiliza para contraseñas
+        url -> Se utiliza para introducir URLs
+
+        color: -> Se utiliza para especificar un color
+        number -> Se utiliza para valores numéricos
+        range -> Se utiliza para establecer un rango
+        reset -> Se utiliza para resetear el formulario
+        text -> Valor por defecto
+ -->
+
+<body>
+
+    <form>
+    <!--div>
+        <input type="color">color<br>
+        <input type="number">Números<br>
+        <input type="range" step="5" min="0" max="20">Rango<br>
+        <input type="reset">Reset/borrar<br>
+        <input type="text" value="" placeholder="Ingrese un valor" required minlength="4" maxlength="8" size="10">Texto con propiedades<br>
+        <input type="hidden">Oculto<br>
+        <input type="file">Archivo/imagen<br>
+    </div-->
+    <div>
+        <input type="date">Fecha<br>
+        <input type="datetime-local">Fecha y hora local<br>
+        <input type="date">Fecha<br>
+        <input type="time">Hora<br>
+        <input type="month" id="start" name="start"
+       min="2018-03" value="2022-14">Mes<br>
+        <input type="week">Semana 
+    </div>
+        <!-- <div>
+            <label> search
+                <input type="search">Búsqueda<br>
+            </label>
+        </div>
+        <div>
+            <label> teléfono
+                <input type="tel">Tipo Nro Tel<br>
+            </label>
+        </div>
+        <div>
+            <label> email
+                <input type="email">
+            </label>
+        </div>
+        <div>
+            <label> password
+                <input type="password">
+            </label>
+        </div>
+        <div>
+            <label> url
+                <input type="url">
+            </label>
+        </div>
+        <div>
+        <label for="avatar">Seleccione una imagen:</label>
+        <input type="file"
+            id="avatar" name="avatar"
+            accept="image/png, image/jpeg">
+        </div> -->
+    </form>
+
+</body>
+
+</html>
