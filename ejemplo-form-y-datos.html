@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejemplo de formularios y extracción de datos</title>
+<!--script src="ejemplo.js"> </script-->
+	<script>
+		function radiosB(){
+		with(document.ForEj)
+		const radios = document.getElementsByName("genero");
+
+		for (var i = 0; i <  radios.length; i++) {
+			if (radios[i].checked) {
+				console.log(radios[i].value);
+				velegido = radios[i].value;
+				break;
+			}
+		}
+		document.write("Sexo Elegido: "+velegido);
+	}
+		function mostrarDatos(){
+			vnombre = document.getElementById("nombre").value;
+			vapellido = document.getElementById("apellido").value;
+			vnum = document.getElementById("num").value;
+			voculto = document.getElementById("oculto").value;
+			vurl = document.getElementById("url1").value;
+			vpass = document.getElementById("pass").value;
+		
+			//Guardamos en una variable el nombre del campo lenguaje para trasnformarlo en objeto.
+			var vlenguaje = document.getElementById("lengua");
+			//Obtenemos del objeto a través del atributo selectedIndex el valor del objeto en esa posición
+			var vLengua = vlenguaje.options[vlenguaje.selectedIndex].value;
+		
+			//vgen = document.getElementsByName("genero").value;
+			vbox1 = document.getElementById("box1").value;
+			vbox2 = document.getElementById("box2").value;
+			vbox3 = document.getElementById("box3").value;
+		
+			/* Imprime de los datos */		
+			document.write("Los datos ingresados fueron: <br/>");
+			document.write("Apellido: "+vapellido+"<br/>");
+			document.write("Nombre: "+vnombre+"<br/>");
+			document.write("Número: "+vnum+"<br/>");
+			document.write("Tipo oculto: "+voculto+"<br/>");
+			document.write("Tipo URL: "+vurl+"<br/>");
+			document.write("Tipo Password: "+vpass+"<br/>");
+			document.write("Elemento de Select: "+vLengua+"<br/>");
+			//document.write("Género: "+vgen+"<br/>");
+			/*******************************************************/
+
+			//radiosB(document.genero);		
+			/**********************************************/
+			document.write("Lenguaje 1: "+vbox1+"<br/>");
+			document.write("Lenguaje 2: "+vbox2+"<br/>");
+			document.write("Lenguaje 3: "+vbox3+"<br/>"); 
+		
+			document.write("<br/><strong>Gracias por sus datos</strong>");
+			
+		}
+		function imprimir() {
+			document.write("<h2>Mostramos los datos</h2>"+mostrarDatos()+"<br/>"+radiosB());
+		}
+		
+		</script>
+   
+</head>
+
+<body>
+	<h2>Formulario carga de datos ejemplo</h2>
+	
+    <form  action="" name="ForEj" method="post"> 
+   
+        <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+        <p></p>
+        <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido">
+		
+		<label for="num">Tipo Número:</label>
+			<input type="number" id="num"><br>
+		<p></p>
+		<label for="oculto">Tipo Oculto:</label>
+			<input type="hidden" name="t_oculto" id="oculto" value="Pepe" ><br>
+		
+		<label for="url1">Tipo URL </label>
+            <input type="url" id="url1" value="">
+		<p></p>
+		<label for="pass">Tipo Password </label>
+            <input type="password" id="pass" value="">
+
+		<p>Trabajo con Selectores</p>
+
+		<select name="lenguajes" id="lengua">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+
+		<p></p>
+        <h2>Género</h2>
+        <label for="genero">Masculino</label>
+            <input type="radio" name="genero" value="masculino">
+        
+        <label for="genero">Femenino</label>
+            <input type="radio" name="genero" value="femenino">
+        
+        <label for="genero">Desconocido</label>
+            <input type="radio" name="genero" value="desconocido">
+      
+        <p></p>
+        <h2>Lenguajes que conoces</h2>
+        <label for="box1"> HTML </label>
+             <input type="checkbox" name="languages" id="box1" value="html">
+       
+        <label for="box2">CSS</label>
+           <input type="checkbox" name="languages" value="css" id="box2">
+        
+        <label for="box3">JavaScript</label>
+            <input type="checkbox" name="languages" value="javascript" id="box3">
+
+		<p><strong>Botones de acción</strong></p>
+        <button type="submit" onClick="imprimir()">Enviar y Mostrar</button>
+        <button type="reset">Borrar</button>
+		
+    </form>
+</body>
+</html>

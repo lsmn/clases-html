@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Botones de Radio</title>
+	<script>
+	function radiosB(){
+		const radios = document.getElementsByName("genero");
+
+		for (var i = 0; i <  radios.length; i++) {
+			if (radios[i].checked) {
+				console.log(radios[i].value);
+				velegido = radios[i].value;
+				break;
+			}
+		}
+		document.write("Sexo Elegido: "+velegido);
+	}
+	</script>
+</head>
+
+<body>
+<h2>Género</h2>
+<label for="genero">Masculino</label>
+<input type="radio" name="genero" value="masculino">
+        
+<label for="genero">Femenino</label>
+<input type="radio" name="genero" value="femenino">
+        
+<label for="genero">Desconocido</label>
+<input type="radio" name="genero" value="desconocido">
+
+<h3>Botones de acción</h3>
+<button type="submit" onClick="radiosB()">Enviar y Mostrar</button>
+<button type="reset">Borrar</button>
+</body>
+</html>
