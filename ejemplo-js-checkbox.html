@@ -10,35 +10,39 @@
   <input type="checkbox" name="fruta" value="manzana"> Manzana
   <input type="checkbox" name="fruta" value="banana"> Banana
   <input type="checkbox" name="fruta" value="naranja"> Naranja<br />
+  <!-- aquí incorporo los checkbox del programa 1c-mostrar-datos-formulario.html -->
   <h2>Lenguajes que conoces</h2>
-        <label> HTML </label>
-             <input type="checkbox" name="lenguajes" value="html" checked>
+  <label> HTML </label>
+  <input type="checkbox" name="lenguajes" value="html" checked>
        
-        <label>CSS</label>
-           <input type="checkbox" name="lenguajes" value="css">
+  <label>CSS</label>
+  <input type="checkbox" name="lenguajes" value="css">
         
-        <label>JavaScript</label>
-            <input type="checkbox" name="lenguajes" value="javascript">
+  <label>JavaScript</label>
+  <input type="checkbox" name="lenguajes" value="javascript">
             
   <input type="submit" value="Enviar" onClick="checkseleccionado()">
   </form>
   <script>
+    // Declaro función checkseleccionado()
   function checkseleccionado(){
   // Obtener todos los elementos de entrada de tipo casilla de verificación
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-// Iterar sobre los elementos de entrada de tipo casilla de verificación
-for (const checkbox of checkboxes) {
+  // Iterar sobre los elementos de entrada de tipo casilla de verificación
+    for (const checkbox of checkboxes) {
   // Comprobar si la casilla de verificación está marcada
-  if (checkbox.checked) {
-    // Obtener el valor de la casilla de verificación
-    const valor = checkbox.value;
+      if (checkbox.checked) {
+        // Obtener el valor de la casilla de verificación
+          const valor = checkbox.value;
 
     // Hacer algo con el valor
     // Por ejemplo, mostrarlo en el console
-    console.log(valor);
+          console.log(valor);
     // Por ejemplo, mostrarlo por pantalla
-    document.write("Valores elegidos: "+valor+"<br />");
+          document.write("Valores elegidos: "+valor+"<br />");
+        // Por cada iteración hace un chequeo del status de la casilla checkbox siguiente, si es verdadero
+        // captura el valor y lo muestra  en la consola y en el document
   }
 }
 }
