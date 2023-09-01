@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extraer Valores de Checkbox</title>
+</head>
+<body>
+  <h1>Extraer Valores de Checkbox</h1>
+  <form name="chek">
+  <input type="checkbox" name="fruta" value="manzana"> Manzana
+  <input type="checkbox" name="fruta" value="banana"> Banana
+  <input type="checkbox" name="fruta" value="naranja"> Naranja<br />
+  <h2>Lenguajes que conoces</h2>
+        <label> HTML </label>
+             <input type="checkbox" name="lenguajes" value="html" checked>
+       
+        <label>CSS</label>
+           <input type="checkbox" name="lenguajes" value="css">
+        
+        <label>JavaScript</label>
+            <input type="checkbox" name="lenguajes" value="javascript">
+            
+  <input type="submit" value="Enviar" onClick="checkseleccionado()">
+  </form>
+  <script>
+  function checkseleccionado(){
+  // Obtener todos los elementos de entrada de tipo casilla de verificación
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Iterar sobre los elementos de entrada de tipo casilla de verificación
+for (const checkbox of checkboxes) {
+  // Comprobar si la casilla de verificación está marcada
+  if (checkbox.checked) {
+    // Obtener el valor de la casilla de verificación
+    const valor = checkbox.value;
+
+    // Hacer algo con el valor
+    // Por ejemplo, mostrarlo en el console
+    console.log(valor);
+    // Por ejemplo, mostrarlo por pantalla
+    document.write("Valores elegidos: "+valor+"<br />");
+  }
+}
+}
+  </script>
+</body>
+</html>

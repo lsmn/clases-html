@@ -1,0 +1,130 @@
+<! DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <!--
+        Los formularios nos permiten interactuar con el usuario. 
+        Etiquetas
+        form-> es la etiqueta que engloba nuestro formulario.
+        label-> Sirve para escribir el nombre del campo a rellenar. Debe tener el atributo for al cual se le indica un id que lo que hará será emparejar el label con su input correspondiente.
+        input-> Sirve para crear un campo que permitirá al usuario interactuar. El único atributo obligatorio es name.
+        button-> Crea un botón que permitirá enviar un formulario.
+    -->
+</head>
+<body>
+<h3>Formulario ejemplo para mostrar datos</h3>
+    <form  action="" method="post"> 
+    <!-- la forma recomendada de hacerlo es la siguiente  -->
+        <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+        <p></p>
+        <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido">
+		
+		<label for="num">Tipo Número:</label>
+			<input type="number" id="num"><br>
+		<p></p>
+		<label for="oculto">Tipo Oculto:</label>
+			<input type="hidden" name="t_oculto" id="oculto" value="Pepe" ><br>
+		
+		<label for="url1">Tipo URL </label>
+            <input type="url" id="url1" value="">
+		<p></p>
+		<label for="pass">Tipo Password </label>
+            <input type="password" id="pass" value="">
+		<p>Trabajo con Selectores</p>
+	
+		<select name="lenguajes" id="lengua">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+		
+		<p></p>
+        <h2>Género</h2>
+        <label for="gen">Masculino</label>
+            <input type="radio" name="genero" value="masculino" id="gen">
+        
+        <label for="gen">Femenino</label>
+            <input type="radio" name="genero" value="femenino" id="gen">
+        
+        <label for="gen">Desconocido</label>
+            <input type="radio" name="genero" value="desconocido" id="gen">
+      
+        <p></p>
+        <h2>Lenguajes que conoces</h2>
+        <label> HTML </label>
+             <input type="checkbox" name="lenguajes" value="html" id="box1" checked>
+       
+        <label>CSS</label>
+           <input type="checkbox" name="lenguajes" value="css" id="box2">
+        
+        <label>JavaScript</label>
+            <input type="checkbox" name="lenguajes" value="javascript" id="box3">
+
+        <!------------------------------------------------>
+        <button type="submit" onClick="mostrarDatos()">Enviar y Mostrar</button>
+        <button type="reset">Borrar</button>
+	</form>
+	<script>
+    //*********************************
+	function mostrarDatos(){
+			vnombre = document.getElementById("nombre").value;
+			vapellido = document.getElementById("apellido").value;
+			vnum = document.getElementById("num").value;
+			voculto = document.getElementById("oculto").value;
+			vurl = document.getElementById("url1").value;
+			vpass = document.getElementById("pass").value;
+
+			//----------------------------/
+			//Guardamos en una variable el nombre del campo lenguaje para trasnformarlo en objeto.
+			var vlenguaje = document.getElementById("lengua");
+			//Obtenemos del objeto a través del atributo selectedIndex el valor del objeto en esa posición
+			var vLengua = vlenguaje.options[vlenguaje.selectedIndex].value;
+            //----------------------------/
+			//  Guarda valor de botones de radio elegido  /
+            //----------------------------/
+			vgen = document.getElementById("gen").value;
+            //----------------------------/
+			//         Guarda valor de checkbox               /
+            //----------------------------/      
+			vbox1 = document.getElementById("box1").value;
+			vbox2 = document.getElementById("box2").value;
+			vbox3 = document.getElementById("box3").value;
+     
+
+            /*****************************************************/
+			/***   Imprime los datos cargados                *****/
+            /*****************************************************/
+            document.write("</h3>Mostramos los datos</h3>");
+			document.write("Apellido: "+vapellido+"<br/>");
+			document.write("Nombre: "+vnombre+"<br/>");
+			document.write("Número: "+vnum+"<br/>");
+			document.write("Tipo oculto: "+voculto+"<br/>");
+			document.write("Tipo URL: "+vurl+"<br/>");
+			document.write("Tipo Password: "+vpass+"<br/>");
+
+            //* Select elegido 
+            document.write("<p>---------------------</p>");
+			document.write("Elemto del Select: "+vLengua+"<br/>");
+            //* radiobutton elegido 
+			document.write("Género: "+vgen+"<br/>");
+            document.write("<p>---------------------</p>");
+            //* CheckBox elegidos
+
+			document.write("Lenguaje 1: "+vbox1+"<br/>");
+			document.write("Lenguaje 2: "+vbox2+"<br/>");
+			document.write("Lenguaje 3: "+vbox3+"<br/>");
+		
+        
+        //------------------------------
+    document.write("<br/><strong>Gracias por sus datos</strong>");
+    }
+</script>
+    <!--https://validator.w3.org/ -->
+    
+</body>
+</html>
